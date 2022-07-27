@@ -5,4 +5,14 @@ const renderHomePage = (req, res) => {
   return res.sendfile(filePath);
 };
 
-module.exports = { renderHomePage };
+const renderLoginPage = (req, res) => {
+  const filePath = path.join(__dirname, "../../../public/login.html");
+  return res.sendfile(filePath);
+};
+
+const renderSignUpPage = (req, res) => {
+  const filePath = path.join(__dirname, "../../../public/signUp.html");
+  return res.sendfile(filePath);
+};
+
+module.exports = { renderHomePage, renderLoginPage, renderSignUpPage };
