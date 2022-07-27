@@ -9,3 +9,9 @@
   background-color: rgb(176, 173, 173);
   color: aliceblue;
 }
+.welcome-banner {
+  border-radius: 8px;
+  max-height: 600px;
+  height: auto;
+  width: 100%;
+}
