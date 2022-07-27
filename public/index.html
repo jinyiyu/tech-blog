@@ -118,7 +118,7 @@
 
     <!-- all post -->
     <div class="card m-4 d-flex justify-content-around flex-wrap">
-      <h4 class="card-header">Title</h4>
+      <h4 class="card-header">Title of the blog post</h4>
       <div class="card-body">
         <p class="card-text">fist line of blog info...</p>
         <button type="button" class="btn btn-primary position-relative">
@@ -132,6 +132,49 @@
         </button>
       </div>
       <div class="card-footer text-muted">Posted 2 days ago</div>
+    </div>
+
+    <!-- creaet new post -->
+    <div class="card m-4 d-flex justify-content-around flex-wrap">
+      <h4 class="card-header">Create your new Blog Post</h4>
+      <form class="card-body was-validated">
+        <div class="mb-3 border">
+          <label for="exampleInputPassword1" class="form-label"
+            >Your title for the post</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Your content for the post</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label"
+            >Invalid example</label
+          >
+          <textarea
+            class="form-control"
+            id="validationTextarea"
+            placeholder="Please type in your post content."
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+            Please enter a message in the textarea.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
 
     <script src="./js/index.js"></script>
