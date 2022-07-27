@@ -25,10 +25,16 @@ const renderCreateBlogPage = (req, res) => {
   return res.sendfile(filePath);
 };
 
+const renderviewBlogPage = (req, res) => {
+  const filePath = path.join(__dirname, "../../../public/viewBlog.html");
+  return res.sendfile(filePath);
+};
+
 module.exports = {
   renderHomePage,
   renderLoginPage,
   renderSignUpPage,
   renderDashboardPage,
   renderCreateBlogPage,
+  renderviewBlogPage,
 };

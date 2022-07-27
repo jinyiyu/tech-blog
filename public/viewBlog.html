@@ -61,30 +61,28 @@
       </div>
     </header>
 
-    <!-- creaet new post -->
+    <!-- single post view -->
     <div class="card m-4 d-flex justify-content-around flex-wrap">
-      <h4 class="card-header">Create your new Blog Post</h4>
+      <h4 class="card-header">Title of the blog post</h4>
+      <div class="card-body">
+        <p class="card-text">full blog post info...</p>
+        <p class="text-muted">
+          Created By: username on date(16/07/2022 - 18:30)
+        </p>
+      </div>
+      <div class="card-footer text-muted">Posted 2 days ago</div>
+    </div>
+
+    <!-- leave a comment -->
+    <div class="card m-4 d-flex justify-content-around flex-wrap">
+      <h4 class="card-header">Leave a comment on this post</h4>
       <form class="card-body was-validated">
-        <div class="mb-3 border">
-          <label for="exampleInputPassword1" class="form-label"
-            >Your title for the post</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-        </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"
-            >Your content for the post</label
-          >
-          <input
-            type="password"
+          <textarea
             class="form-control"
-            id="exampleInputPassword1"
-          />
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
         </div>
         <!-- <div class="mb-3">
           <label for="validationTextarea" class="form-label"
@@ -100,8 +98,19 @@
             Please enter a message in the textarea.
           </div>
         </div> -->
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+      <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+      </div>
+    </div>
+
+    <!-- view all the comments on this post -->
+    <div class="list-group m-4 border p-3">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Comment: comtent paragraph</h5>
+        <small>3 days ago</small>
+      </div>
+      <p class="mb-1 text-muted">Commented by Username.</p>
     </div>
 
     <script src="./js/index.js"></script>

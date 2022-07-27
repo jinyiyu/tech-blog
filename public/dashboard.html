@@ -52,12 +52,9 @@
               <a class="nav-link" href="./dashboard.html">My Dashboard</a>
             </li>
             <li class="nav-item">
-              <button
-                class="nav-link btn btn-light LogOutBtn"
-                href="./login.html"
-              >
+              <a class="nav-link btn btn-light LogOutBtn" href="./login.html">
                 Log out
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -82,7 +79,11 @@
       <h4 class="card-header">Title of the blog post</h4>
       <div class="card-body">
         <p class="card-text">fist line of blog info...</p>
-        <button type="button" class="btn btn-primary position-relative">
+        <a
+          type="button"
+          class="btn btn-primary position-relative"
+          href="./viewBlog.html"
+        >
           Read Full Blog
           <span
             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -90,7 +91,7 @@
             99+
             <span class="visually-hidden">unread messages</span>
           </span>
-        </button>
+        </a>
       </div>
       <div class="card-footer text-muted">Posted 2 days ago</div>
     </div>
