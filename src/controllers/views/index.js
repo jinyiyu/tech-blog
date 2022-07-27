@@ -15,4 +15,14 @@ const renderSignUpPage = (req, res) => {
   return res.sendfile(filePath);
 };
 
-module.exports = { renderHomePage, renderLoginPage, renderSignUpPage };
+const renderDashboardPage = (req, res) => {
+  const filePath = path.join(__dirname, "../../../public/dashboard.html");
+  return res.sendfile(filePath);
+};
+
+module.exports = {
+  renderHomePage,
+  renderLoginPage,
+  renderSignUpPage,
+  renderDashboardPage,
+};
