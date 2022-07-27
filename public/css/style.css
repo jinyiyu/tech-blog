@@ -4,3 +4,8 @@
   background-color: #e9ecef;
   border-radius: 0.3rem;
 }
+
+.LogOutBtn {
+  background-color: rgb(176, 173, 173);
+  color: aliceblue;
+}
