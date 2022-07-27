@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- public header - reusable for handlebars-->
+    <!-- private header - reusable for handlebars-->
     <header class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">Tech Blog</a>
@@ -49,83 +49,62 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./login.html">Login</a>
+              <a class="nav-link" href="./dashboard.html">My Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./signUp.html">Sign Up</a>
+              <button
+                class="nav-link btn btn-light LogOutBtn"
+                href="./login.html"
+              >
+                Log out
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </header>
 
-    <!-- sign up form -->
+    <!-- creaet new post -->
     <div class="card m-4 d-flex justify-content-around flex-wrap">
-      <h4 class="card-header text-center">Sign Up</h4>
-      <form class="m-2 card-body was-validated">
+      <h4 class="card-header">Create your new Blog Post</h4>
+      <form class="card-body was-validated">
         <div class="mb-3 border">
+          <label for="exampleInputPassword1" class="form-label"
+            >Your title for the post</label
+          >
           <input
             type="email"
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            placeholder="First Name"
           />
         </div>
-        <div class="mb-3 border">
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Last Name"
-          />
-        </div>
-        <div class="mb-3 border">
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Email address"
-          />
-        </div>
-        <div class="mb-3 border">
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Perfered Username"
-          />
-        </div>
-        <div class="mb-3 border">
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter your password"
-          />
-        </div>
-        <div class="mb-0">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Your content for the post</label
+          >
           <input
             type="password"
             class="form-control"
             id="exampleInputPassword1"
-            placeholder="Confirm your password"
           />
         </div>
+        <!-- <div class="mb-3">
+          <label for="validationTextarea" class="form-label"
+            >Invalid example</label
+          >
+          <textarea
+            class="form-control"
+            id="validationTextarea"
+            placeholder="Please type in your post content."
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+            Please enter a message in the textarea.
+          </div>
+        </div> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <div class="text-center text-danger">
-        Failed to Sign Up. Please try again.
-      </div>
-      <div class="m-3 text-center">
-        <button type="submit" class="btn btn-primary center">Sign Up</button>
-      </div>
-      <div class="text-center mb-3">
-        Already have an account? <a href="./login.html">Login </a>now!
-      </div>
     </div>
 
     <script src="./js/index.js"></script>
