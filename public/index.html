@@ -159,7 +159,7 @@
             id="exampleInputPassword1"
           />
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="validationTextarea" class="form-label"
             >Invalid example</label
           >
@@ -172,9 +172,111 @@
           <div class="invalid-feedback">
             Please enter a message in the textarea.
           </div>
-        </div>
+        </div> -->
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+    </div>
+
+    <!-- log in page -->
+    <div class="card m-4 d-flex justify-content-around flex-wrap">
+      <h4 class="card-header text-center">Login</h4>
+      <form class="m-2 card-body was-validated">
+        <div class="mb-3 border">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter your email address"
+          />
+        </div>
+        <div class="mb-0">
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Enter your password"
+          />
+        </div>
+      </form>
+      <div class="text-center text-danger">
+        Failed to login. Please try again.
+      </div>
+      <div class="m-3 text-center">
+        <button type="submit" class="btn btn-primary center">Login</button>
+      </div>
+      <div class="text-center mb-3">
+        Don't have an account? <a href="./index.html">Sign Up </a>today!
+      </div>
+    </div>
+
+    <!-- sign up page -->
+    <div class="card m-4 d-flex justify-content-around flex-wrap">
+      <h4 class="card-header text-center">Sign Up</h4>
+      <form class="m-2 card-body was-validated">
+        <div class="mb-3 border">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="mb-3 border">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Last Name"
+          />
+        </div>
+        <div class="mb-3 border">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email address"
+          />
+        </div>
+        <div class="mb-3 border">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Perfered Username"
+          />
+        </div>
+        <div class="mb-3 border">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="mb-0">
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Confirm your password"
+          />
+        </div>
+      </form>
+      <div class="text-center text-danger">
+        Failed to Sign Up. Please try again.
+      </div>
+      <div class="m-3 text-center">
+        <button type="submit" class="btn btn-primary center">Sign Up</button>
+      </div>
+      <div class="text-center mb-3">
+        Already have an account? <a href="./index.html">Login </a>now!
+      </div>
     </div>
 
     <script src="./js/index.js"></script>
