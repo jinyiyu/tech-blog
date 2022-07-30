@@ -5,7 +5,7 @@ const dashboard = require("./dashboard");
 
 const router = Router();
 
-router.use("/blog", blog);
-router.use("/dashboard", dashboard);
+router.use("/signup", signup);
+router.use("/login", login);
 
 module.exports = router;
