@@ -1,13 +1,14 @@
 const { DataTypes, Model } = require("sequelize");
 const connection = require("../config/connection");
 const User = require("./User");
+const Blog = require("./Blog");
 
-class Blog extends Model {
+class Comment extends Model {
   getUser() {
     return {
       id: this.id,
-      title: this.title,
-      body: this.body,
+      message: this.message,
+      blogId: this.blogId,
       userId: this.userId,
     };
   }
@@ -20,11 +21,7 @@ const schema = {
     autoIncrement: true,
     primaryKey: true,
   },
-  title: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  body: {
+  message: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -36,6 +33,14 @@ const schema = {
       key: "id",
     },
   },
+  blogId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    reference: {
+      model: Blog,
+      key: "id",
+    },
+  },
 };
 
 const options = {
@@ -43,9 +48,9 @@ const options = {
   timeStamp: true,
   underscore: false,
   freezeTableName: true,
-  tableName: "blog",
+  tableName: "comment",
 };
 
 Comment.init(schema, options);
 
-module.exports = Blog;
+module.exports = Comment;
