@@ -46,6 +46,6 @@ const options = {
   tableName: "blog",
 };
 
-Comment.init(schema, options);
+Blog.init(schema, options);
 
 module.exports = Blog;
