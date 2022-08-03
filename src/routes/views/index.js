@@ -11,10 +11,10 @@ const {
 const router = Router();
 
 router.get("/", renderHomePage);
-router.get("/", renderLoginPage);
-router.get("/", renderSignUpPage);
-router.get("/", renderDashboardPage);
-router.get("/", renderCreateBlogPage);
-router.get("/", renderviewBlogPage);
+router.get("/login", renderLoginPage);
+router.get("/signup", renderSignUpPage);
+router.get("/dashboard", renderDashboardPage);
+router.get("/createBlog", renderCreateBlogPage);
+router.get("/viewBlog/:id", renderviewBlogPage);
 
 module.exports = router;

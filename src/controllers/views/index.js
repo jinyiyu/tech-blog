@@ -1,23 +1,27 @@
 const path = require("path");
 
 const renderHomePage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/index.html");
-  return res.sendfile(filePath);
+  return res.render("home");
 };
 
 const renderLoginPage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/login.html");
-  return res.sendfile(filePath);
+  return res.render("login");
 };
 
 const renderSignUpPage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/signUp.html");
-  return res.sendfile(filePath);
+  return res.render("signup");
 };
 
-const renderDashboardPage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/dashboard.html");
-  return res.sendfile(filePath);
+const renderDashboardPage = async (req, res) => {
+  try {
+    const userId = 1;
+    const data = await Blog.findAll({ where: { userId } });
+    return res.render("dashboard", { data });
+  } catch (error) {
+    console.log(`[Error]:Failed to create user | ${error.message}`);
+
+    return res.status(500).json({ success: false });
+  }
 };
 
 const renderCreateBlogPage = (req, res) => {

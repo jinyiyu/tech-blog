@@ -3,7 +3,7 @@ const Blog = require("../../models/Blog");
 const getMyDashboard = async (req, res) => {
   try {
     // change this hard coded userId later
-    userId = 1;
+    const userId = 1;
     const data = await Blog.findAll({ where: { id: userId } });
 
     if (!data) {

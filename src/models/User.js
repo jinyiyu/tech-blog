@@ -1,4 +1,4 @@
-const hashPassword = require("../hooks/index");
+const { hashPassword } = require("../hooks/index");
 const bcrypt = require("bcrypt");
 const { DataTypes, Model } = require("sequelize");
 const connection = require("../config/connection");

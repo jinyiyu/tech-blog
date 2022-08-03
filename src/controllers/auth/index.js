@@ -3,7 +3,9 @@ const User = require("../../models/User");
 const signup = async (req, res) => {
   try {
     const { firstname, lastname, email, password, username } = req.body;
+
     const user = await User.findOne({ where: { email } });
+    // console.log(user);
 
     // check if the user already exist - if exist return error
     if (user) {
@@ -21,6 +23,7 @@ const signup = async (req, res) => {
       password,
       username,
     });
+    console.log(newUser);
 
     if (!newUser) {
       return res.status(404).json({
@@ -39,7 +42,8 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const user = User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { email } });
+    console.log(user);
 
     // check if the user not signed up - if email not exist
     if (!user) {
@@ -48,7 +52,7 @@ const login = async (req, res) => {
     }
 
     // check if the password is correct
-    const isAuthorized = await User.checkPassword(password);
+    const isAuthorized = await user.checkPassword(password);
     if (isAuthorized) {
       return res.status(200).json({ success: "Login successful" });
     } else {
