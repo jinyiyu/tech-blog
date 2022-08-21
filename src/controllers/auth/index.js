@@ -43,7 +43,6 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
-    console.log(user);
 
     // check if the user not signed up - if email not exist
     if (!user) {
