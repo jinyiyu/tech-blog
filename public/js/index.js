@@ -1,5 +1,4 @@
-// const signupForm = $("#signupForm");
-const signupForm = document.getElementById("signupForm");
+const signupForm = $("#signupForm");
 
 const handleSignup = (event) => {
   event.preventDefault();
@@ -8,3 +7,10 @@ const handleSignup = (event) => {
 };
 
 signupForm.submit(handleSignup);
+
+const firstname = $("#firstname").val();
+const lastname = $("#lastname").val();
+const emailAddress = $("#emailAddress").val();
+const username = $("#username").val();
+const password = $("#password").val();
+const confirmPassword = $("#confirmPassword").val();

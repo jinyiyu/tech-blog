@@ -38,43 +38,30 @@
   <h4 class="card-header text-center">Sign Up</h4>
   <form class="m-2 card-body was-validated" id="signupForm">
     <div class="mb-3 border">
-      <input
-        type="email"
-        class="form-control"
-        aria-describedby="emailHelp"
-        placeholder="First Name"
-      />
+      <input class="form-control" placeholder="First Name" id="firstname" />
+    </div>
+    <div class="mb-3 border">
+      <input class="form-control" placeholder="Last Name" id="lastname" />
     </div>
     <div class="mb-3 border">
       <input
-        type="email"
         class="form-control"
-        aria-describedby="emailHelp"
-        placeholder="Last Name"
-      />
-    </div>
-    <div class="mb-3 border">
-      <input
-        type="email"
-        class="form-control"
-        aria-describedby="emailHelp"
         placeholder="Email address"
+        id="emailAddress"
       />
     </div>
     <div class="mb-3 border">
       <input
-        type="email"
         class="form-control"
-        aria-describedby="emailHelp"
         placeholder="Perfered Username"
+        id="username"
       />
     </div>
     <div class="mb-3 border">
       <input
-        type="email"
         class="form-control"
-        aria-describedby="emailHelp"
         placeholder="Enter your password"
+        id="password"
       />
     </div>
     <div class="mb-0">
@@ -82,17 +69,18 @@
         type="password"
         class="form-control"
         placeholder="Confirm your password"
+        id="confirmPassword"
       />
     </div>
+    <div class="text-center text-danger">
+      Failed to Sign Up. Please try again.
+    </div>
+    <div class="m-3 text-center">
+      <button type="submit" class="btn btn-primary center">Sign Up</button>
+    </div>
+    <div class="text-center mb-3">
+      Already have an account?
+      <a href="./login.html">Login </a>now!
+    </div>
   </form>
-  <div class="text-center text-danger">
-    Failed to Sign Up. Please try again.
-  </div>
-  <div class="m-3 text-center">
-    <button type="submit" class="btn btn-primary center">Sign Up</button>
-  </div>
-  <div class="text-center mb-3">
-    Already have an account?
-    <a href="./login.html">Login </a>now!
-  </div>
 </div>
